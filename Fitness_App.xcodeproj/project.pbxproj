@@ -9,21 +9,21 @@
 /* Begin PBXBuildFile section */
 		24124C8E284E245800951E3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24124C8D284E245800951E3D /* AppDelegate.swift */; };
 		24124C90284E245800951E3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24124C8F284E245800951E3D /* SceneDelegate.swift */; };
-		24124C92284E245800951E3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24124C91284E245800951E3D /* ViewController.swift */; };
-		24124C95284E245800951E3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24124C93284E245800951E3D /* Main.storyboard */; };
+		24124C92284E245800951E3D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24124C91284E245800951E3D /* MainViewController.swift */; };
 		24124C97284E245A00951E3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24124C96284E245A00951E3D /* Assets.xcassets */; };
 		24124C9A284E245A00951E3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24124C98284E245A00951E3D /* LaunchScreen.storyboard */; };
+		2481054D2857A91000F2B9AE /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2481054C2857A91000F2B9AE /* CalendarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		24124C8A284E245800951E3D /* Fitness_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fitness_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24124C8D284E245800951E3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24124C8F284E245800951E3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		24124C91284E245800951E3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		24124C94284E245800951E3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		24124C91284E245800951E3D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		24124C96284E245A00951E3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24124C99284E245A00951E3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24124C9B284E245A00951E3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2481054C2857A91000F2B9AE /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +56,63 @@
 		24124C8C284E245800951E3D /* Fitness_App */ = {
 			isa = PBXGroup;
 			children = (
+				2481054528579E4600F2B9AE /* Application  */,
+				2481054A2857A1C600F2B9AE /* MainModule */,
+				2481054928579E8000F2B9AE /* Resources */,
+			);
+			path = Fitness_App;
+			sourceTree = "<group>";
+		};
+		2481054528579E4600F2B9AE /* Application  */ = {
+			isa = PBXGroup;
+			children = (
 				24124C8D284E245800951E3D /* AppDelegate.swift */,
 				24124C8F284E245800951E3D /* SceneDelegate.swift */,
-				24124C91284E245800951E3D /* ViewController.swift */,
-				24124C93284E245800951E3D /* Main.storyboard */,
+			);
+			path = "Application ";
+			sourceTree = "<group>";
+		};
+		2481054628579E6400F2B9AE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2481054728579E6D00F2B9AE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2481054C2857A91000F2B9AE /* CalendarView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2481054828579E7500F2B9AE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				24124C91284E245800951E3D /* MainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2481054928579E8000F2B9AE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				24124C96284E245A00951E3D /* Assets.xcassets */,
 				24124C98284E245A00951E3D /* LaunchScreen.storyboard */,
 				24124C9B284E245A00951E3D /* Info.plist */,
 			);
-			path = Fitness_App;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2481054A2857A1C600F2B9AE /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				2481054628579E6400F2B9AE /* Models */,
+				2481054728579E6D00F2B9AE /* Views */,
+				2481054828579E7500F2B9AE /* Controller */,
+			);
+			path = MainModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +175,6 @@
 			files = (
 				24124C9A284E245A00951E3D /* LaunchScreen.storyboard in Resources */,
 				24124C97284E245A00951E3D /* Assets.xcassets in Resources */,
-				24124C95284E245800951E3D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +185,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24124C92284E245800951E3D /* ViewController.swift in Sources */,
+				24124C92284E245800951E3D /* MainViewController.swift in Sources */,
 				24124C8E284E245800951E3D /* AppDelegate.swift in Sources */,
+				2481054D2857A91000F2B9AE /* CalendarView.swift in Sources */,
 				24124C90284E245800951E3D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +195,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		24124C93284E245800951E3D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				24124C94284E245800951E3D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		24124C98284E245A00951E3D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -289,10 +329,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UJRW24XH5L;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Fitness_App/Info.plist;
+				INFOPLIST_FILE = Fitness_App/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -317,10 +356,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UJRW24XH5L;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Fitness_App/Info.plist;
+				INFOPLIST_FILE = Fitness_App/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
