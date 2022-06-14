@@ -23,6 +23,7 @@ class MainViewController: UIViewController {
         label.text = "Your name"
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.5
+        label.textColor = .specialGray
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -33,6 +34,7 @@ class MainViewController: UIViewController {
         button.layer.cornerRadius = 10
         button.setTitle("Add workout", for: .normal)
         button.tintColor = .specialDarkGreen
+        button.titleLabel?.font = .robotoMedium12()
         button.setImage(UIImage(named: "addWorkout"), for: .normal)
         button.imageEdgeInsets = UIEdgeInsets(top: 0,
                                               left: 20,
