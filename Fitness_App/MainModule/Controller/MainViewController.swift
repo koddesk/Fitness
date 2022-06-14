@@ -11,7 +11,7 @@ class MainViewController: UIViewController {
     
     private let userPhotoImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = #colorLiteral(red: 0.7607843137, green: 0.7607843137, blue: 0.7607843137, alpha: 1)
+        imageView.backgroundColor = .specialGray
         imageView.layer.borderWidth = 5
         imageView.layer.borderColor = UIColor.white.cgColor
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -29,10 +29,10 @@ class MainViewController: UIViewController {
     
     private lazy var addWorkoutButton: UIButton = {
         let button = UIButton(type: .system)
-        button.backgroundColor = #colorLiteral(red: 0.9921568627, green: 0.8392156863, blue: 0.3568627451, alpha: 1)
+        button.backgroundColor = .specialYellow
         button.layer.cornerRadius = 10
         button.setTitle("Add workout", for: .normal)
-        button.tintColor = #colorLiteral(red: 0.1411764706, green: 0.2941176471, blue: 0.262745098, alpha: 1)
+        button.tintColor = .specialDarkGreen
         button.setImage(UIImage(named: "addWorkout"), for: .normal)
         button.imageEdgeInsets = UIEdgeInsets(top: 0,
                                               left: 20,
@@ -42,12 +42,14 @@ class MainViewController: UIViewController {
                                               left: -40,
                                               bottom: 0,
                                               right: 0)
+        button.addShadowOnView()
         button.addTarget(self, action: #selector(addWorkoutButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
     private let calendarView = CalendarView()
+    private let weatherView = WeatherView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,12 +65,15 @@ class MainViewController: UIViewController {
     }
     
     private func setupViews() {
-        view.backgroundColor = #colorLiteral(red: 0.9532985091, green: 0.9427116513, blue: 0.9085384011, alpha: 1)
+        view.backgroundColor = .white
         
         view.addSubview(calendarView)
         view.addSubview(userPhotoImageView)
         view.addSubview(userNameLabel)
         view.addSubview(addWorkoutButton)
+        
+        view.addSubview(weatherView)
+        weatherView.addShadowOnView()
     }
     
     @objc private func addWorkoutButtonTapped() {
@@ -108,6 +113,13 @@ extension MainViewController {
             addWorkoutButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             addWorkoutButton.heightAnchor.constraint(equalToConstant: 80),
             addWorkoutButton.widthAnchor.constraint(equalToConstant: 80)
+        ])
+        
+        NSLayoutConstraint.activate([
+            weatherView.topAnchor.constraint(equalTo: calendarView.bottomAnchor, constant: 5),
+            weatherView.leadingAnchor.constraint(equalTo: addWorkoutButton.trailingAnchor, constant: 10),
+            weatherView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            weatherView.heightAnchor.constraint(equalToConstant: 80)
         ])
     }
 }

@@ -12,6 +12,12 @@
 		24124C92284E245800951E3D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24124C91284E245800951E3D /* MainViewController.swift */; };
 		24124C97284E245A00951E3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24124C96284E245A00951E3D /* Assets.xcassets */; };
 		24124C9A284E245A00951E3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24124C98284E245A00951E3D /* LaunchScreen.storyboard */; };
+		241602F72858EE8D00CCFCEE /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241602F62858EE8D00CCFCEE /* WeatherView.swift */; };
+		241602FB2858F26D00CCFCEE /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 241602F92858F26D00CCFCEE /* Roboto-Bold.ttf */; };
+		241602FC2858F26D00CCFCEE /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 241602FA2858F26D00CCFCEE /* Roboto-Medium.ttf */; };
+		241603002858F3B500CCFCEE /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241602FF2858F3B500CCFCEE /* UIView + Extensions.swift */; };
+		241603022858F4CC00CCFCEE /* UIFont + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241603012858F4CC00CCFCEE /* UIFont + Extensions.swift */; };
+		241603042858F50F00CCFCEE /* UIColor + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241603032858F50F00CCFCEE /* UIColor + Extensions.swift */; };
 		2481054D2857A91000F2B9AE /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2481054C2857A91000F2B9AE /* CalendarView.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +29,12 @@
 		24124C96284E245A00951E3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24124C99284E245A00951E3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24124C9B284E245A00951E3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		241602F62858EE8D00CCFCEE /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		241602F92858F26D00CCFCEE /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		241602FA2858F26D00CCFCEE /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		241602FF2858F3B500CCFCEE /* UIView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extensions.swift"; sourceTree = "<group>"; };
+		241603012858F4CC00CCFCEE /* UIFont + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Extensions.swift"; sourceTree = "<group>"; };
+		241603032858F50F00CCFCEE /* UIColor + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extensions.swift"; sourceTree = "<group>"; };
 		2481054C2857A91000F2B9AE /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,9 +70,37 @@
 			children = (
 				2481054528579E4600F2B9AE /* Application  */,
 				2481054A2857A1C600F2B9AE /* MainModule */,
+				241602FD2858F38A00CCFCEE /* Extensions */,
 				2481054928579E8000F2B9AE /* Resources */,
 			);
 			path = Fitness_App;
+			sourceTree = "<group>";
+		};
+		241602F82858F24B00CCFCEE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				241602F92858F26D00CCFCEE /* Roboto-Bold.ttf */,
+				241602FA2858F26D00CCFCEE /* Roboto-Medium.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		241602FD2858F38A00CCFCEE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				241602FE2858F39B00CCFCEE /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		241602FE2858F39B00CCFCEE /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				241602FF2858F3B500CCFCEE /* UIView + Extensions.swift */,
+				241603012858F4CC00CCFCEE /* UIFont + Extensions.swift */,
+				241603032858F50F00CCFCEE /* UIColor + Extensions.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		2481054528579E4600F2B9AE /* Application  */ = {
@@ -83,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				2481054C2857A91000F2B9AE /* CalendarView.swift */,
+				241602F62858EE8D00CCFCEE /* WeatherView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -98,6 +139,7 @@
 		2481054928579E8000F2B9AE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				241602F82858F24B00CCFCEE /* Fonts */,
 				24124C96284E245A00951E3D /* Assets.xcassets */,
 				24124C98284E245A00951E3D /* LaunchScreen.storyboard */,
 				24124C9B284E245A00951E3D /* Info.plist */,
@@ -173,8 +215,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				241602FC2858F26D00CCFCEE /* Roboto-Medium.ttf in Resources */,
 				24124C9A284E245A00951E3D /* LaunchScreen.storyboard in Resources */,
 				24124C97284E245A00951E3D /* Assets.xcassets in Resources */,
+				241602FB2858F26D00CCFCEE /* Roboto-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,9 +229,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				241602F72858EE8D00CCFCEE /* WeatherView.swift in Sources */,
+				241603022858F4CC00CCFCEE /* UIFont + Extensions.swift in Sources */,
 				24124C92284E245800951E3D /* MainViewController.swift in Sources */,
 				24124C8E284E245800951E3D /* AppDelegate.swift in Sources */,
 				2481054D2857A91000F2B9AE /* CalendarView.swift in Sources */,
+				241603042858F50F00CCFCEE /* UIColor + Extensions.swift in Sources */,
+				241603002858F3B500CCFCEE /* UIView + Extensions.swift in Sources */,
 				24124C90284E245800951E3D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
