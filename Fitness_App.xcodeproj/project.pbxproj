@@ -20,6 +20,8 @@
 		241603042858F50F00CCFCEE /* UIColor + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241603032858F50F00CCFCEE /* UIColor + Extensions.swift */; };
 		2416030728590C3200CCFCEE /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2416030628590C3200CCFCEE /* CalendarCollectionViewCell.swift */; };
 		2481054D2857A91000F2B9AE /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2481054C2857A91000F2B9AE /* CalendarView.swift */; };
+		24F48CD3285A513A00122258 /* WorkoutTodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F48CD2285A513A00122258 /* WorkoutTodayView.swift */; };
+		24F48CD5285A58DE00122258 /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F48CD4285A58DE00122258 /* WorkoutTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		241603032858F50F00CCFCEE /* UIColor + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extensions.swift"; sourceTree = "<group>"; };
 		2416030628590C3200CCFCEE /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		2481054C2857A91000F2B9AE /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		24F48CD2285A513A00122258 /* WorkoutTodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTodayView.swift; sourceTree = "<group>"; };
+		24F48CD4285A58DE00122258 /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				2416030628590C3200CCFCEE /* CalendarCollectionViewCell.swift */,
+				24F48CD4285A58DE00122258 /* WorkoutTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -135,6 +140,7 @@
 				2416030528590BF000CCFCEE /* Cells */,
 				2481054C2857A91000F2B9AE /* CalendarView.swift */,
 				241602F62858EE8D00CCFCEE /* WeatherView.swift */,
+				24F48CD2285A513A00122258 /* WorkoutTodayView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -240,10 +246,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24F48CD5285A58DE00122258 /* WorkoutTableViewCell.swift in Sources */,
 				241602F72858EE8D00CCFCEE /* WeatherView.swift in Sources */,
 				241603022858F4CC00CCFCEE /* UIFont + Extensions.swift in Sources */,
 				24124C92284E245800951E3D /* MainViewController.swift in Sources */,
 				24124C8E284E245800951E3D /* AppDelegate.swift in Sources */,
+				24F48CD3285A513A00122258 /* WorkoutTodayView.swift in Sources */,
 				2481054D2857A91000F2B9AE /* CalendarView.swift in Sources */,
 				241603042858F50F00CCFCEE /* UIColor + Extensions.swift in Sources */,
 				2416030728590C3200CCFCEE /* CalendarCollectionViewCell.swift in Sources */,
