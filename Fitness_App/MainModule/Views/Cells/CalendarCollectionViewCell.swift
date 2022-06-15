@@ -60,6 +60,11 @@ class CalendarCollectionViewCell: UICollectionViewCell {
         addSubview(dayOfWeekLabel)
         addSubview(numberOfDayLabel)
     }
+}
+
+//MARK: - Set Constraints
+
+extension CalendarCollectionViewCell {
     
     private func setConstraints() {
         
