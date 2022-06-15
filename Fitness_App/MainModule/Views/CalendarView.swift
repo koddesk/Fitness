@@ -11,7 +11,7 @@ class CalendarView: UIView {
     
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.minimumLineSpacing = 3
+        layout.minimumInteritemSpacing = 3
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.backgroundColor = .none
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -78,7 +78,7 @@ extension CalendarView: UICollectionViewDelegate {
 extension CalendarView: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: collectionView.frame.width / 10,
+        CGSize(width: collectionView.frame.width / 8,
                height: collectionView.frame.height)
     }
 }

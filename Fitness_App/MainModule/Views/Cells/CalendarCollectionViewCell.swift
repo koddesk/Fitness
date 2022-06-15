@@ -29,6 +29,20 @@ class CalendarCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
+    override var isSelected: Bool {
+        didSet {
+            if self.isSelected {
+                backgroundColor = .specialYellow
+                dayOfWeekLabel.textColor = .specialBlack
+                numberOfDayLabel.textColor = .specialDarkGreen
+            } else {
+                backgroundColor = .specialGreen
+                dayOfWeekLabel.textColor = .white
+                numberOfDayLabel.textColor = .white
+            }
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         

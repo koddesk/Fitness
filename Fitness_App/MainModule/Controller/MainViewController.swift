@@ -101,7 +101,7 @@ extension MainViewController {
             calendarView.topAnchor.constraint(equalTo: userPhotoImageView.centerYAnchor),
             calendarView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             calendarView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-            calendarView.heightAnchor.constraint(equalToConstant: 70),
+            calendarView.heightAnchor.constraint(equalToConstant: 70)
         ])
         
         NSLayoutConstraint.activate([
