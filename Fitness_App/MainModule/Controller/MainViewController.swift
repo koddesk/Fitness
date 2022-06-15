@@ -50,8 +50,18 @@ class MainViewController: UIViewController {
         return button
     }()
     
+    private let workoutTodayLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Workout today"
+        label.textColor = .specialLightBrown
+        label.font = .robotoMedium14()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     private let calendarView = CalendarView()
     private let weatherView = WeatherView()
+    private let workoutTodayView = WorkoutTodayView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,7 +77,7 @@ class MainViewController: UIViewController {
     }
     
     private func setupViews() {
-        view.backgroundColor = .white
+        view.backgroundColor = .specialBackground
         
         view.addSubview(calendarView)
         view.addSubview(userPhotoImageView)
@@ -76,6 +86,9 @@ class MainViewController: UIViewController {
         
         view.addSubview(weatherView)
         weatherView.addShadowOnView()
+        
+        view.addSubview(workoutTodayLabel)
+        view.addSubview(workoutTodayView)
     }
     
     @objc private func addWorkoutButtonTapped() {
@@ -101,7 +114,7 @@ extension MainViewController {
             calendarView.topAnchor.constraint(equalTo: userPhotoImageView.centerYAnchor),
             calendarView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             calendarView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-            calendarView.heightAnchor.constraint(equalToConstant: 70),
+            calendarView.heightAnchor.constraint(equalToConstant: 70)
         ])
         
         NSLayoutConstraint.activate([
@@ -122,6 +135,18 @@ extension MainViewController {
             weatherView.leadingAnchor.constraint(equalTo: addWorkoutButton.trailingAnchor, constant: 10),
             weatherView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
             weatherView.heightAnchor.constraint(equalToConstant: 80)
+        ])
+        
+        NSLayoutConstraint.activate([
+            workoutTodayLabel.topAnchor.constraint(equalTo: addWorkoutButton.bottomAnchor, constant: 10),
+            workoutTodayLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10)
+        ])
+        
+        NSLayoutConstraint.activate([
+            workoutTodayView.topAnchor.constraint(equalTo: workoutTodayLabel.bottomAnchor, constant: 0),
+            workoutTodayView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            workoutTodayView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+            workoutTodayView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
         ])
     }
 }
