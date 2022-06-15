@@ -18,6 +18,7 @@
 		241603002858F3B500CCFCEE /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241602FF2858F3B500CCFCEE /* UIView + Extensions.swift */; };
 		241603022858F4CC00CCFCEE /* UIFont + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241603012858F4CC00CCFCEE /* UIFont + Extensions.swift */; };
 		241603042858F50F00CCFCEE /* UIColor + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241603032858F50F00CCFCEE /* UIColor + Extensions.swift */; };
+		2416030728590C3200CCFCEE /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2416030628590C3200CCFCEE /* CalendarCollectionViewCell.swift */; };
 		2481054D2857A91000F2B9AE /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2481054C2857A91000F2B9AE /* CalendarView.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		241602FF2858F3B500CCFCEE /* UIView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extensions.swift"; sourceTree = "<group>"; };
 		241603012858F4CC00CCFCEE /* UIFont + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Extensions.swift"; sourceTree = "<group>"; };
 		241603032858F50F00CCFCEE /* UIColor + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extensions.swift"; sourceTree = "<group>"; };
+		2416030628590C3200CCFCEE /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		2481054C2857A91000F2B9AE /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +105,14 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
+		2416030528590BF000CCFCEE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2416030628590C3200CCFCEE /* CalendarCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		2481054528579E4600F2B9AE /* Application  */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +132,7 @@
 		2481054728579E6D00F2B9AE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2416030528590BF000CCFCEE /* Cells */,
 				2481054C2857A91000F2B9AE /* CalendarView.swift */,
 				241602F62858EE8D00CCFCEE /* WeatherView.swift */,
 			);
@@ -235,6 +246,7 @@
 				24124C8E284E245800951E3D /* AppDelegate.swift in Sources */,
 				2481054D2857A91000F2B9AE /* CalendarView.swift in Sources */,
 				241603042858F50F00CCFCEE /* UIColor + Extensions.swift in Sources */,
+				2416030728590C3200CCFCEE /* CalendarCollectionViewCell.swift in Sources */,
 				241603002858F3B500CCFCEE /* UIView + Extensions.swift in Sources */,
 				24124C90284E245800951E3D /* SceneDelegate.swift in Sources */,
 			);
@@ -380,6 +392,7 @@
 				INFOPLIST_FILE = Fitness_App/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -391,7 +404,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -407,6 +420,7 @@
 				INFOPLIST_FILE = Fitness_App/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -418,7 +432,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
