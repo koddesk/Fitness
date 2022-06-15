@@ -77,7 +77,7 @@ class MainViewController: UIViewController {
     }
     
     private func setupViews() {
-        view.backgroundColor = .white
+        view.backgroundColor = .specialBackground
         
         view.addSubview(calendarView)
         view.addSubview(userPhotoImageView)

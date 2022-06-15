@@ -11,9 +11,8 @@ class WorkoutTodayView: UIView {
     
     private let tableView: UITableView = {
         let tableView = UITableView()
-        tableView.backgroundColor = .none
+        tableView.backgroundColor = .specialBackground
         tableView.separatorStyle = .none
-        tableView.bounces = false
         tableView.showsVerticalScrollIndicator = false
         tableView.delaysContentTouches = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -35,11 +34,10 @@ class WorkoutTodayView: UIView {
     }
     
     private func setupViews() {
-        backgroundColor = .systemBackground
         translatesAutoresizingMaskIntoConstraints = false
         
         addSubview(tableView)
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: idWorkoutTableViewCell)
+        tableView.register(WorkoutTableViewCell.self, forCellReuseIdentifier: idWorkoutTableViewCell)
     }
     
     private func setDelegates() {
@@ -53,11 +51,14 @@ class WorkoutTodayView: UIView {
 extension WorkoutTodayView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        15
+        10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: idWorkoutTableViewCell, for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: idWorkoutTableViewCell, for: indexPath) as? WorkoutTableViewCell else {
+            return UITableViewCell()
+        }
+        cell.backgroundColor = .specialBackground
         return cell
     }
 }
