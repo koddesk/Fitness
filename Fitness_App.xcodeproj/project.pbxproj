@@ -19,6 +19,9 @@
 		241603022858F4CC00CCFCEE /* UIFont + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241603012858F4CC00CCFCEE /* UIFont + Extensions.swift */; };
 		241603042858F50F00CCFCEE /* UIColor + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241603032858F50F00CCFCEE /* UIColor + Extensions.swift */; };
 		2416030728590C3200CCFCEE /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2416030628590C3200CCFCEE /* CalendarCollectionViewCell.swift */; };
+		246C71BE285B8C5D0068A712 /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246C71BD285B8C5D0068A712 /* StatisticViewController.swift */; };
+		246C71C1285B92C30068A712 /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246C71C0285B92C30068A712 /* StatisticView.swift */; };
+		246C71C3285B95180068A712 /* StatisticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246C71C2285B95180068A712 /* StatisticTableViewCell.swift */; };
 		2481054D2857A91000F2B9AE /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2481054C2857A91000F2B9AE /* CalendarView.swift */; };
 		24E9C389285A617700D993A8 /* UIStackView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9C388285A617700D993A8 /* UIStackView + Extensions.swift */; };
 		24F48CD3285A513A00122258 /* WorkoutTodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F48CD2285A513A00122258 /* WorkoutTodayView.swift */; };
@@ -40,6 +43,9 @@
 		241603012858F4CC00CCFCEE /* UIFont + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Extensions.swift"; sourceTree = "<group>"; };
 		241603032858F50F00CCFCEE /* UIColor + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extensions.swift"; sourceTree = "<group>"; };
 		2416030628590C3200CCFCEE /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
+		246C71BD285B8C5D0068A712 /* StatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
+		246C71C0285B92C30068A712 /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
+		246C71C2285B95180068A712 /* StatisticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticTableViewCell.swift; sourceTree = "<group>"; };
 		2481054C2857A91000F2B9AE /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		24E9C388285A617700D993A8 /* UIStackView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extensions.swift"; sourceTree = "<group>"; };
 		24F48CD2285A513A00122258 /* WorkoutTodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTodayView.swift; sourceTree = "<group>"; };
@@ -78,6 +84,7 @@
 			children = (
 				2481054528579E4600F2B9AE /* Application  */,
 				2481054A2857A1C600F2B9AE /* MainModule */,
+				246C71B9285B8BE60068A712 /* StatisticModule */,
 				241602FD2858F38A00CCFCEE /* Extensions */,
 				2481054928579E8000F2B9AE /* Resources */,
 			);
@@ -117,6 +124,48 @@
 			children = (
 				2416030628590C3200CCFCEE /* CalendarCollectionViewCell.swift */,
 				24F48CD4285A58DE00122258 /* WorkoutTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		246C71B9285B8BE60068A712 /* StatisticModule */ = {
+			isa = PBXGroup;
+			children = (
+				246C71BC285B8C1F0068A712 /* Models */,
+				246C71BB285B8C140068A712 /* View */,
+				246C71BA285B8C080068A712 /* Controller */,
+			);
+			path = StatisticModule;
+			sourceTree = "<group>";
+		};
+		246C71BA285B8C080068A712 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				246C71BD285B8C5D0068A712 /* StatisticViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		246C71BB285B8C140068A712 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				246C71BF285B8CC00068A712 /* Cells */,
+				246C71C0285B92C30068A712 /* StatisticView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		246C71BC285B8C1F0068A712 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		246C71BF285B8CC00068A712 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				246C71C2285B95180068A712 /* StatisticTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -256,8 +305,11 @@
 				24124C8E284E245800951E3D /* AppDelegate.swift in Sources */,
 				24F48CD3285A513A00122258 /* WorkoutTodayView.swift in Sources */,
 				2481054D2857A91000F2B9AE /* CalendarView.swift in Sources */,
+				246C71C1285B92C30068A712 /* StatisticView.swift in Sources */,
 				24E9C389285A617700D993A8 /* UIStackView + Extensions.swift in Sources */,
+				246C71BE285B8C5D0068A712 /* StatisticViewController.swift in Sources */,
 				241603042858F50F00CCFCEE /* UIColor + Extensions.swift in Sources */,
+				246C71C3285B95180068A712 /* StatisticTableViewCell.swift in Sources */,
 				2416030728590C3200CCFCEE /* CalendarCollectionViewCell.swift in Sources */,
 				241603002858F3B500CCFCEE /* UIView + Extensions.swift in Sources */,
 				24124C90284E245800951E3D /* SceneDelegate.swift in Sources */,
