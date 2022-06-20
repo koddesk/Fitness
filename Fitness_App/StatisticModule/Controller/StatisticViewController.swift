@@ -95,7 +95,7 @@ extension StatisticViewController {
             statisticView.topAnchor.constraint(equalTo: exercisesLabel.bottomAnchor, constant: 5),
             statisticView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             statisticView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            statisticView.heightAnchor.constraint(equalToConstant: 500)
+            statisticView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -80)
         ])
     }
 }
