@@ -19,6 +19,8 @@
 		241603022858F4CC00CCFCEE /* UIFont + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241603012858F4CC00CCFCEE /* UIFont + Extensions.swift */; };
 		241603042858F50F00CCFCEE /* UIColor + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241603032858F50F00CCFCEE /* UIColor + Extensions.swift */; };
 		2416030728590C3200CCFCEE /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2416030628590C3200CCFCEE /* CalendarCollectionViewCell.swift */; };
+		246A51952860AB8B00F7D1FC /* UILabel + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246A51942860AB8B00F7D1FC /* UILabel + Extensions.swift */; };
+		246A51972860AFA500F7D1FC /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246A51962860AFA500F7D1FC /* MainTabBarController.swift */; };
 		246C71BE285B8C5D0068A712 /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246C71BD285B8C5D0068A712 /* StatisticViewController.swift */; };
 		246C71C1285B92C30068A712 /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246C71C0285B92C30068A712 /* StatisticView.swift */; };
 		246C71C3285B95180068A712 /* StatisticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246C71C2285B95180068A712 /* StatisticTableViewCell.swift */; };
@@ -43,6 +45,8 @@
 		241603012858F4CC00CCFCEE /* UIFont + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Extensions.swift"; sourceTree = "<group>"; };
 		241603032858F50F00CCFCEE /* UIColor + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extensions.swift"; sourceTree = "<group>"; };
 		2416030628590C3200CCFCEE /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
+		246A51942860AB8B00F7D1FC /* UILabel + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extensions.swift"; sourceTree = "<group>"; };
+		246A51962860AFA500F7D1FC /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		246C71BD285B8C5D0068A712 /* StatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
 		246C71C0285B92C30068A712 /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
 		246C71C2285B95180068A712 /* StatisticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticTableViewCell.swift; sourceTree = "<group>"; };
@@ -115,6 +119,7 @@
 				241603012858F4CC00CCFCEE /* UIFont + Extensions.swift */,
 				241603032858F50F00CCFCEE /* UIColor + Extensions.swift */,
 				24E9C388285A617700D993A8 /* UIStackView + Extensions.swift */,
+				246A51942860AB8B00F7D1FC /* UILabel + Extensions.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -201,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				24124C91284E245800951E3D /* MainViewController.swift */,
+				246A51962860AFA500F7D1FC /* MainTabBarController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -312,7 +318,9 @@
 				246C71C3285B95180068A712 /* StatisticTableViewCell.swift in Sources */,
 				2416030728590C3200CCFCEE /* CalendarCollectionViewCell.swift in Sources */,
 				241603002858F3B500CCFCEE /* UIView + Extensions.swift in Sources */,
+				246A51952860AB8B00F7D1FC /* UILabel + Extensions.swift in Sources */,
 				24124C90284E245800951E3D /* SceneDelegate.swift in Sources */,
+				246A51972860AFA500F7D1FC /* MainTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

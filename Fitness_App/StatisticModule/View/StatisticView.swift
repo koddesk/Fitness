@@ -12,7 +12,7 @@ class StatisticView: UIView {
     private let tableView: UITableView = {
         let tableView = UITableView()
         tableView.backgroundColor = .none
-        tableView.bounces = false
+        tableView.bounces = true
         tableView.separatorInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
         tableView.showsVerticalScrollIndicator = false
         tableView.translatesAutoresizingMaskIntoConstraints = false

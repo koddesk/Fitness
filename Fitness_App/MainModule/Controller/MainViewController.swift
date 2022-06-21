@@ -146,7 +146,7 @@ extension MainViewController {
             workoutTodayView.topAnchor.constraint(equalTo: workoutTodayLabel.bottomAnchor, constant: 0),
             workoutTodayView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
             workoutTodayView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
-            workoutTodayView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
+            workoutTodayView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -80)
         ])
     }
 }
