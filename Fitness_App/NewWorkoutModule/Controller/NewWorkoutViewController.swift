@@ -31,6 +31,18 @@ class NewWorkoutViewController: UIViewController {
     private let dateAndRepeatView = DateAndRepeatView()
     private let repsOrTimerView = RepsOrTimerView()
     
+    private lazy var  saveButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.backgroundColor = .specialGreen
+        button.setTitle("SAVE", for: .normal)
+        button.titleLabel?.font = .robotoBold16()
+        button.tintColor = .white
+        button.layer.cornerRadius = 15
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
+        return button
+    }()
+    
     override func viewDidLayoutSubviews() {
         closeButton.layer.cornerRadius = closeButton.frame.width / 2
     }
@@ -52,10 +64,16 @@ class NewWorkoutViewController: UIViewController {
         view.addSubview(newWorkoutNameView)
         view.addSubview(dateAndRepeatView)
         view.addSubview(repsOrTimerView)
+        
+        view.addSubview(saveButton)
     }
     
     @objc private func closeButtonTapped() {
         dismiss(animated: true)
+    }
+    
+    @objc private func saveButtonTapped() {
+        print("SAVE")
     }
 }
 
@@ -96,6 +114,13 @@ extension NewWorkoutViewController {
             repsOrTimerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             repsOrTimerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             repsOrTimerView.heightAnchor.constraint(equalToConstant: 320)
+        ])
+        
+        NSLayoutConstraint.activate([
+            saveButton.topAnchor.constraint(equalTo: repsOrTimerView.bottomAnchor, constant: 20),
+            saveButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            saveButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            saveButton.heightAnchor.constraint(equalToConstant: 55)
         ])
     }
 }
