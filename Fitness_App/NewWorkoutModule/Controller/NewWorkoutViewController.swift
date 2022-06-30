@@ -29,6 +29,7 @@ class NewWorkoutViewController: UIViewController {
     //Views
     private let newWorkoutNameView = NewWorkoutNameView()
     private let dateAndRepeatView = DateAndRepeatView()
+    private let repsOrTimerView = RepsOrTimerView()
     
     override func viewDidLayoutSubviews() {
         closeButton.layer.cornerRadius = closeButton.frame.width / 2
@@ -50,6 +51,7 @@ class NewWorkoutViewController: UIViewController {
         //Views
         view.addSubview(newWorkoutNameView)
         view.addSubview(dateAndRepeatView)
+        view.addSubview(repsOrTimerView)
     }
     
     @objc private func closeButtonTapped() {
@@ -79,14 +81,21 @@ extension NewWorkoutViewController {
             newWorkoutNameView.topAnchor.constraint(equalTo: newWorkoutLabel.bottomAnchor, constant: 10),
             newWorkoutNameView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             newWorkoutNameView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            newWorkoutNameView.heightAnchor.constraint(equalToConstant: 75)
+            newWorkoutNameView.heightAnchor.constraint(equalToConstant: 57)
         ])
         
         NSLayoutConstraint.activate([
-            dateAndRepeatView.topAnchor.constraint(equalTo: newWorkoutNameView.bottomAnchor, constant: 5),
+            dateAndRepeatView.topAnchor.constraint(equalTo: newWorkoutNameView.bottomAnchor, constant: 15),
             dateAndRepeatView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             dateAndRepeatView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            dateAndRepeatView.heightAnchor.constraint(equalToConstant: 169)
+            dateAndRepeatView.heightAnchor.constraint(equalToConstant: 115)
+        ])
+        
+        NSLayoutConstraint.activate([
+            repsOrTimerView.topAnchor.constraint(equalTo: dateAndRepeatView.bottomAnchor, constant: 15),
+            repsOrTimerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            repsOrTimerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            repsOrTimerView.heightAnchor.constraint(equalToConstant: 320)
         ])
     }
 }

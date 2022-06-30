@@ -27,6 +27,7 @@
 		246C71C3285B95180068A712 /* StatisticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246C71C2285B95180068A712 /* StatisticTableViewCell.swift */; };
 		2481054D2857A91000F2B9AE /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2481054C2857A91000F2B9AE /* CalendarView.swift */; };
 		248EA8BE2868F3D6008FB3EC /* NewWorkoutNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248EA8BD2868F3D6008FB3EC /* NewWorkoutNameView.swift */; };
+		24B85EFA286D96B800B1FE8C /* RepsOrTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B85EF9286D96B800B1FE8C /* RepsOrTimerView.swift */; };
 		24E2624C286B91CC00D610B4 /* DateAndRepeatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E2624B286B91CC00D610B4 /* DateAndRepeatView.swift */; };
 		24E9C389285A617700D993A8 /* UIStackView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9C388285A617700D993A8 /* UIStackView + Extensions.swift */; };
 		24F48CD3285A513A00122258 /* WorkoutTodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F48CD2285A513A00122258 /* WorkoutTodayView.swift */; };
@@ -56,6 +57,7 @@
 		246C71C2285B95180068A712 /* StatisticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticTableViewCell.swift; sourceTree = "<group>"; };
 		2481054C2857A91000F2B9AE /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		248EA8BD2868F3D6008FB3EC /* NewWorkoutNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkoutNameView.swift; sourceTree = "<group>"; };
+		24B85EF9286D96B800B1FE8C /* RepsOrTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsOrTimerView.swift; sourceTree = "<group>"; };
 		24E2624B286B91CC00D610B4 /* DateAndRepeatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateAndRepeatView.swift; sourceTree = "<group>"; };
 		24E9C388285A617700D993A8 /* UIStackView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extensions.swift"; sourceTree = "<group>"; };
 		24F48CD2285A513A00122258 /* WorkoutTodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTodayView.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 			children = (
 				248EA8BD2868F3D6008FB3EC /* NewWorkoutNameView.swift */,
 				24E2624B286B91CC00D610B4 /* DateAndRepeatView.swift */,
+				24B85EF9286D96B800B1FE8C /* RepsOrTimerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 			files = (
 				24F48CD5285A58DE00122258 /* WorkoutTableViewCell.swift in Sources */,
 				248EA8BE2868F3D6008FB3EC /* NewWorkoutNameView.swift in Sources */,
+				24B85EFA286D96B800B1FE8C /* RepsOrTimerView.swift in Sources */,
 				241602F72858EE8D00CCFCEE /* WeatherView.swift in Sources */,
 				24E2624C286B91CC00D610B4 /* DateAndRepeatView.swift in Sources */,
 				241603022858F4CC00CCFCEE /* UIFont + Extensions.swift in Sources */,

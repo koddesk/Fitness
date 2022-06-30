@@ -20,7 +20,8 @@ class DateAndRepeatView: UIView {
         return view
     }()
     
-    //Labels insideView
+    //MARK: - Labels insideView
+    
     private let dateLabel = UILabel(text: "Date",
                                     font: .robotoMedium18(),
                                     textColor: .specialGray)
@@ -45,7 +46,8 @@ class DateAndRepeatView: UIView {
         return repeatSwitch
     }()
     
-    //StacksView
+    //MARK: - StacksView
+    
     private var dateStackView = UIStackView()
     private var repeatStackView = UIStackView()
     
