@@ -20,6 +20,15 @@ class DateAndRepeatView: UIView {
         return view
     }()
     
+    //Labels insideView
+    private let dateLabel = UILabel(text: "Date",
+                                    font: .robotoMedium18(),
+                                    textColor: .specialGray)
+    
+    private let repeatLabel = UILabel(text: "Repeat every 7 days",
+                                      font: .robotoMedium18(),
+                                      textColor: .specialGray)
+    
     private let datePicker: UIDatePicker = {
         let datePicker = UIDatePicker()
         datePicker.datePickerMode = .date
@@ -27,6 +36,18 @@ class DateAndRepeatView: UIView {
         datePicker.translatesAutoresizingMaskIntoConstraints = false
         return datePicker
     }()
+    
+    private let repeatSwitch: UISwitch = {
+        let repeatSwitch = UISwitch()
+        repeatSwitch.isOn = true
+        repeatSwitch.onTintColor = .specialGreen
+        repeatSwitch.translatesAutoresizingMaskIntoConstraints = false
+        return repeatSwitch
+    }()
+    
+    //StacksView
+    private var dateStackView = UIStackView()
+    private var repeatStackView = UIStackView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -45,7 +66,16 @@ class DateAndRepeatView: UIView {
         
         addSubview(nameLabel)
         addSubview(insideView)
-        addSubview(datePicker)
+        
+        dateStackView = UIStackView(arrangedSubviews: [dateLabel, datePicker],
+                                    axis: .horizontal,
+                                    spacing: 10)
+        addSubview(dateStackView)
+        
+        repeatStackView = UIStackView(arrangedSubviews: [repeatLabel, repeatSwitch],
+                                      axis: .horizontal,
+                                      spacing: 10)
+        addSubview(repeatStackView)
     }
 }
 
@@ -64,12 +94,19 @@ extension DateAndRepeatView {
             insideView.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 3),
             insideView.leadingAnchor.constraint(equalTo: leadingAnchor),
             insideView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            insideView.heightAnchor.constraint(equalToConstant: 150)
+            insideView.heightAnchor.constraint(equalToConstant: 95)
         ])
         
         NSLayoutConstraint.activate([
-            datePicker.topAnchor.constraint(equalTo: insideView.topAnchor, constant: 5),
-            datePicker.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25)
+            dateStackView.topAnchor.constraint(equalTo: insideView.topAnchor, constant: 10),
+            dateStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            dateStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
+        ])
+        
+        NSLayoutConstraint.activate([
+            repeatStackView.topAnchor.constraint(equalTo: dateStackView.bottomAnchor, constant: 10),
+            repeatStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            repeatStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
         ])
     }
 }

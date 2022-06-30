@@ -26,7 +26,7 @@ class NewWorkoutViewController: UIViewController {
         return button
     }()
     
-    //VIEWS
+    //Views
     private let newWorkoutNameView = NewWorkoutNameView()
     private let dateAndRepeatView = DateAndRepeatView()
     
@@ -47,6 +47,7 @@ class NewWorkoutViewController: UIViewController {
         view.addSubview(newWorkoutLabel)
         view.addSubview(closeButton)
         
+        //Views
         view.addSubview(newWorkoutNameView)
         view.addSubview(dateAndRepeatView)
     }
@@ -85,7 +86,7 @@ extension NewWorkoutViewController {
             dateAndRepeatView.topAnchor.constraint(equalTo: newWorkoutNameView.bottomAnchor, constant: 5),
             dateAndRepeatView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             dateAndRepeatView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            dateAndRepeatView.heightAnchor.constraint(equalToConstant: 200)
+            dateAndRepeatView.heightAnchor.constraint(equalToConstant: 169)
         ])
     }
 }
