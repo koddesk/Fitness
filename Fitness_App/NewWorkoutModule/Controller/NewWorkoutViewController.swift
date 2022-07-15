@@ -26,7 +26,7 @@ class NewWorkoutViewController: UIViewController {
         return button
     }()
     
-    //Views
+    //MARK: Views
     private let newWorkoutNameView = NewWorkoutNameView()
     private let dateAndRepeatView = DateAndRepeatView()
     private let repsOrTimerView = RepsOrTimerView()
@@ -60,7 +60,6 @@ class NewWorkoutViewController: UIViewController {
         view.addSubview(newWorkoutLabel)
         view.addSubview(closeButton)
         
-        //Views
         view.addSubview(newWorkoutNameView)
         view.addSubview(dateAndRepeatView)
         view.addSubview(repsOrTimerView)
