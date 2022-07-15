@@ -5,7 +5,6 @@
 //  Created by KODDER on 28.06.2022.
 //
 
-import Foundation
 import UIKit
 
 class DateAndRepeatView: UIView {
@@ -20,8 +19,7 @@ class DateAndRepeatView: UIView {
         return view
     }()
     
-    //MARK: - Labels insideView
-    
+    //MARK: Labels insideView
     private let dateLabel = UILabel(text: "Date",
                                     font: .robotoMedium18(),
                                     textColor: .specialGray)
@@ -46,8 +44,7 @@ class DateAndRepeatView: UIView {
         return repeatSwitch
     }()
     
-    //MARK: - StacksView
-    
+    //MARK: StacksView
     private var dateStackView = UIStackView()
     private var repeatStackView = UIStackView()
     

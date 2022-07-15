@@ -19,8 +19,7 @@ class RepsOrTimerView: UIView {
         return view
     }()
     
-    //MARK: - Sliders
-    
+    //MARK: Sliders
     private lazy var setsSlider: UISlider = {
         let slider = UISlider()
         slider.minimumValue = 0
@@ -54,8 +53,7 @@ class RepsOrTimerView: UIView {
         return slider
     }()
     
-    //MARK: - Labels insideView
-    
+    //MARK: Labels insideView
     private let setsLabel = UILabel(text: "Sets",
                                     font: .robotoMedium18(),
                                     textColor: .specialGray)
@@ -83,8 +81,7 @@ class RepsOrTimerView: UIView {
     
     private let repeatOrTimerLabel = UILabel(text: "Choose repeat or timer")
     
-    //MARK: - StacksView
-    
+    //MARK: StacksView
     private var setsStackView = UIStackView()
     private var repsStackView = UIStackView()
     private var timerStackView = UIStackView()
@@ -129,15 +126,43 @@ class RepsOrTimerView: UIView {
     }
     
     @objc private func setsSliderChanged() {
-        print(setsSlider.value)
+        numberOfSetLabel.text = "\(Int(setsSlider.value))"
     }
     
     @objc private func repsSliderChanged() {
-        print(repsSlider.value)
+        numberOfRepsLabel.text = "\(Int(repsSlider.value))"
+        
+        //MARK: Interaction repsSlider and timerSlider
+        setNegative(label: timerLabel, numberLabel: numberOfTimerLabel, slider: timerSlider)
+        setActive(label: repsLabel, numberLabel: numberOfRepsLabel, slider: repsSlider)
     }
     
     @objc private func timerSliderChanged() {
-        print(timerSlider.value)
+        
+        let (min, sec) = { (sec: Int) -> (Int, Int) in
+            return (sec / 60, sec % 60)}(Int(timerSlider.value))
+        
+        numberOfTimerLabel.text = (sec != 0 ? "\(min) min \(sec) sec" : "\(min) min")
+        
+        //MARK: Interaction repsSlider and timerSlider
+        setNegative(label: repsLabel, numberLabel: numberOfRepsLabel, slider: repsSlider)
+        setActive(label: timerLabel, numberLabel: numberOfTimerLabel, slider: timerSlider)
+    }
+    
+    //MARK: Set Negative
+    private func setNegative(label: UILabel, numberLabel: UILabel, slider: UISlider) {
+        label.alpha = 0.5
+        numberLabel.alpha = 0.5
+        numberLabel.text = "0"
+        slider.alpha = 0.5
+        slider.value = 0
+    }
+    
+    //MARK: Set Active
+    private func setActive(label: UILabel, numberLabel: UILabel, slider: UISlider) {
+        label.alpha = 1
+        numberLabel.alpha = 1
+        slider.alpha = 1
     }
 }
 
