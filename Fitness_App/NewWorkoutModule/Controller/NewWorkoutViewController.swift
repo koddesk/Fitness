@@ -115,9 +115,17 @@ class NewWorkoutViewController: UIViewController {
             RealmManager.shared.saveWorkoutModel(model: workoutModel)
             workoutModel = WorkoutModel()
             alertOk(title: "Success", message: nil)
+            refreshObjects()
         } else {
             alertOk(title: "Error", message: "Enter all parameters")
         }
+    }
+    
+    //MARK: Refresh Objects
+    private func refreshObjects() {
+        dateAndRepeatView.refreshDatePickerAndSwitch()
+        repsOrTimerView.refreshLabelsAndSliders()
+        newWorkoutNameView.nameTextField.text = ""
     }
     
     //MARK: Hide Keyboard

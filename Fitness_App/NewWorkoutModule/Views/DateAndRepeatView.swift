@@ -82,6 +82,16 @@ class DateAndRepeatView: UIView {
         (datePicker.date, repeatSwitch.isOn)
     }
     
+    //MARK: Refresh Workout Objects
+    private func refreshWorkoutObjects() {
+        datePicker.setDate(Date(), animated: true)
+        repeatSwitch.isOn = true
+    }
+    
+    public func refreshDatePickerAndSwitch() {
+        refreshWorkoutObjects()
+    }
+    
     //MARK: Set DateAndRepeat
     public func setDateAndRepeat() -> (Date, Bool) {
         getDateAndRepeat()
