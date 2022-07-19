@@ -11,7 +11,7 @@ class NewWorkoutNameView: UIView {
     
     private let nameLabel = UILabel(text: "Name")
     
-    private let nameTextField: UITextField = {
+    let nameTextField: UITextField = {
         let textField = UITextField()
         textField.backgroundColor = .specialBrown
         textField.layer.cornerRadius = 15

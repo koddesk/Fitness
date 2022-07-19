@@ -164,6 +164,19 @@ class RepsOrTimerView: UIView {
         numberLabel.alpha = 1
         slider.alpha = 1
     }
+    
+    //MARK: Get SliderValue
+    private func getSliderValue() -> (Int, Int, Int) {
+        let setsSliderValue = Int(setsSlider.value)
+        let repsSliderValue = Int(repsSlider.value)
+        let timerSliderValue = Int(timerSlider.value)
+        return (setsSliderValue, repsSliderValue, timerSliderValue)
+    }
+    
+    //MARK: Set SliderValue
+    public func setSliderValue() -> (Int, Int, Int) {
+        getSliderValue()
+    }
 }
 
 //MARK: - Set Constraints
