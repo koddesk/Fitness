@@ -33,6 +33,7 @@ class NewWorkoutNameView: UIView {
         
         setupViews()
         setConstraints()
+        setDelegates()
     }
     
     required init?(coder: NSCoder) {
@@ -45,6 +46,18 @@ class NewWorkoutNameView: UIView {
         
         addSubview(nameLabel)
         addSubview(nameTextField)
+    }
+    
+    private func setDelegates() {
+        nameTextField.delegate = self
+    }
+}
+//MARK: - UITextFieldDelegate
+
+extension NewWorkoutNameView: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        nameTextField.resignFirstResponder()
     }
 }
 

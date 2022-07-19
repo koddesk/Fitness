@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import RealmSwift
 
 class NewWorkoutViewController: UIViewController {
     
@@ -45,7 +44,6 @@ class NewWorkoutViewController: UIViewController {
     private let repsOrTimerView = RepsOrTimerView()
     
     //MARK: Local Realm
-    private let localRealm = try! Realm()
     private var workoutModel = WorkoutModel()
     
     private let testImage = UIImage(named: "imageCell")
@@ -59,6 +57,7 @@ class NewWorkoutViewController: UIViewController {
         
         setupViews()
         setConstraints()
+        addTaps()
     }
     
     private func setupViews() {
@@ -104,6 +103,16 @@ class NewWorkoutViewController: UIViewController {
         
         guard let imageData = testImage?.pngData() else { return }
         workoutModel.workoutImage = imageData
+    }
+    
+    //MARK: Hide Keyboard
+    private func addTaps() {
+        let tapScreen = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(tapScreen)
+    }
+    
+    @objc private func hideKeyboard() {
+        view.endEditing(true)
     }
 }
 
