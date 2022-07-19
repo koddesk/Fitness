@@ -79,8 +79,7 @@ class NewWorkoutViewController: UIViewController {
     
     @objc private func saveButtonTapped() {
         setModel()
-        RealmManager.shared.saveWorkoutModel(model: workoutModel)
-        workoutModel = WorkoutModel()
+        saveModel()
     }
     
     //MARK: Set Model
@@ -103,6 +102,22 @@ class NewWorkoutViewController: UIViewController {
         
         guard let imageData = testImage?.pngData() else { return }
         workoutModel.workoutImage = imageData
+    }
+    
+    //MARK: Save Model
+    private func saveModel() {
+        guard let text = newWorkoutNameView.nameTextField.text else { return }
+        let count = text.filter {$0.isNumber || $0.isLetter }.count
+        
+        if count != 0 &&
+            workoutModel.workoutSets != 0 &&
+            (workoutModel.workoutReps != 0 || workoutModel.workoutTimer != 0) {
+            RealmManager.shared.saveWorkoutModel(model: workoutModel)
+            workoutModel = WorkoutModel()
+            alertOk(title: "Success", message: nil)
+        } else {
+            alertOk(title: "Error", message: "Enter all parameters")
+        }
     }
     
     //MARK: Hide Keyboard
