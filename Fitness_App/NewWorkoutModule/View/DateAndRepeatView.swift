@@ -76,6 +76,16 @@ class DateAndRepeatView: UIView {
                                       spacing: 10)
         addSubview(repeatStackView)
     }
+    
+    //MARK: Get DateAndRepeat
+    private func getDateAndRepeat() -> (Date, Bool) {
+        (datePicker.date, repeatSwitch.isOn)
+    }
+    
+    //MARK: Set DateAndRepeat
+    public func setDateAndRepeat() -> (Date, Bool) {
+        getDateAndRepeat()
+    }
 }
 
 //MARK: - Set Constraints

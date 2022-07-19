@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class NewWorkoutViewController: UIViewController {
     
@@ -26,11 +27,6 @@ class NewWorkoutViewController: UIViewController {
         return button
     }()
     
-    //MARK: Views
-    private let newWorkoutNameView = NewWorkoutNameView()
-    private let dateAndRepeatView = DateAndRepeatView()
-    private let repsOrTimerView = RepsOrTimerView()
-    
     private lazy var  saveButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = .specialGreen
@@ -42,6 +38,17 @@ class NewWorkoutViewController: UIViewController {
         button.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
         return button
     }()
+    
+    //MARK: Views
+    private let newWorkoutNameView = NewWorkoutNameView()
+    private let dateAndRepeatView = DateAndRepeatView()
+    private let repsOrTimerView = RepsOrTimerView()
+    
+    //MARK: Local Realm
+    private let localRealm = try! Realm()
+    private var workoutModel = WorkoutModel()
+    
+    private let testImage = UIImage(named: "imageCell")
     
     override func viewDidLayoutSubviews() {
         closeButton.layer.cornerRadius = closeButton.frame.width / 2
@@ -72,7 +79,31 @@ class NewWorkoutViewController: UIViewController {
     }
     
     @objc private func saveButtonTapped() {
-        print("SAVE")
+        setModel()
+        RealmManager.shared.saveWorkoutModel(model: workoutModel)
+        workoutModel = WorkoutModel()
+    }
+    
+    //MARK: Set Model
+    private func setModel() {
+        //MARK: New Workout Name View
+        guard let nameWorkout = newWorkoutNameView.nameTextField.text else { return }
+        workoutModel.workoutName = nameWorkout
+        
+        //MARK: Date And Repeat View
+        let dateFromPicker = dateAndRepeatView.setDateAndRepeat().0
+        
+        workoutModel.workoutDate = dateFromPicker
+        workoutModel.workoutNumberOfDay = dateFromPicker.getWeekdayNumber()
+        workoutModel.workoutRepeat = dateAndRepeatView.setDateAndRepeat().1
+        
+        //MARK: Reps Or Timer View
+        workoutModel.workoutSets = repsOrTimerView.setSliderValue().0
+        workoutModel.workoutReps = repsOrTimerView.setSliderValue().1
+        workoutModel.workoutTimer = repsOrTimerView.setSliderValue().2
+        
+        guard let imageData = testImage?.pngData() else { return }
+        workoutModel.workoutImage = imageData
     }
 }
 
