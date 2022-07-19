@@ -25,6 +25,7 @@
 		246C71BE285B8C5D0068A712 /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246C71BD285B8C5D0068A712 /* StatisticViewController.swift */; };
 		246C71C1285B92C30068A712 /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246C71C0285B92C30068A712 /* StatisticView.swift */; };
 		246C71C3285B95180068A712 /* StatisticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246C71C2285B95180068A712 /* StatisticTableViewCell.swift */; };
+		247EFEE52886F3910081F2E2 /* SimpleAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247EFEE42886F3910081F2E2 /* SimpleAlert.swift */; };
 		2481054D2857A91000F2B9AE /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2481054C2857A91000F2B9AE /* CalendarView.swift */; };
 		248EA8BE2868F3D6008FB3EC /* NewWorkoutNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248EA8BD2868F3D6008FB3EC /* NewWorkoutNameView.swift */; };
 		24B85EFA286D96B800B1FE8C /* RepsOrTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B85EF9286D96B800B1FE8C /* RepsOrTimerView.swift */; };
@@ -60,6 +61,7 @@
 		246C71BD285B8C5D0068A712 /* StatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
 		246C71C0285B92C30068A712 /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
 		246C71C2285B95180068A712 /* StatisticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticTableViewCell.swift; sourceTree = "<group>"; };
+		247EFEE42886F3910081F2E2 /* SimpleAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAlert.swift; sourceTree = "<group>"; };
 		2481054C2857A91000F2B9AE /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		248EA8BD2868F3D6008FB3EC /* NewWorkoutNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkoutNameView.swift; sourceTree = "<group>"; };
 		24B85EF9286D96B800B1FE8C /* RepsOrTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsOrTimerView.swift; sourceTree = "<group>"; };
@@ -158,7 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				246A519B2860BC7B00F7D1FC /* Models */,
-				246A519A2860BC7300F7D1FC /* View */,
+				246A519A2860BC7300F7D1FC /* Views */,
 				246A51992860BC6400F7D1FC /* Controller */,
 			);
 			path = NewWorkoutModule;
@@ -172,14 +174,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		246A519A2860BC7300F7D1FC /* View */ = {
+		246A519A2860BC7300F7D1FC /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				248EA8BD2868F3D6008FB3EC /* NewWorkoutNameView.swift */,
 				24E2624B286B91CC00D610B4 /* DateAndRepeatView.swift */,
 				24B85EF9286D96B800B1FE8C /* RepsOrTimerView.swift */,
+				247EFEE32886F3470081F2E2 /* Alerts */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		246A519B2860BC7B00F7D1FC /* Models */ = {
@@ -194,7 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				246C71BC285B8C1F0068A712 /* Models */,
-				246C71BB285B8C140068A712 /* View */,
+				246C71BB285B8C140068A712 /* Views */,
 				246C71BA285B8C080068A712 /* Controller */,
 			);
 			path = StatisticModule;
@@ -208,13 +211,13 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		246C71BB285B8C140068A712 /* View */ = {
+		246C71BB285B8C140068A712 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				246C71BF285B8CC00068A712 /* Cells */,
 				246C71C0285B92C30068A712 /* StatisticView.swift */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		246C71BC285B8C1F0068A712 /* Models */ = {
@@ -230,6 +233,14 @@
 				246C71C2285B95180068A712 /* StatisticTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		247EFEE32886F3470081F2E2 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				247EFEE42886F3910081F2E2 /* SimpleAlert.swift */,
+			);
+			path = Alerts;
 			sourceTree = "<group>";
 		};
 		2481054528579E4600F2B9AE /* Application  */ = {
@@ -384,6 +395,7 @@
 				24EC020A2881F52200D1ACDE /* RealmManager.swift in Sources */,
 				241603022858F4CC00CCFCEE /* UIFont + Extensions.swift in Sources */,
 				24124C92284E245800951E3D /* MainViewController.swift in Sources */,
+				247EFEE52886F3910081F2E2 /* SimpleAlert.swift in Sources */,
 				24124C8E284E245800951E3D /* AppDelegate.swift in Sources */,
 				24F48CD3285A513A00122258 /* WorkoutTodayView.swift in Sources */,
 				2481054D2857A91000F2B9AE /* CalendarView.swift in Sources */,
